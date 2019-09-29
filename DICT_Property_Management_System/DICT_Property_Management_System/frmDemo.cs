@@ -80,5 +80,11 @@ namespace DICT_Property_Management_System
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Property_Assign wind = new Property_Assign();
+            wind.ShowDialog();
+        }
     }
 }

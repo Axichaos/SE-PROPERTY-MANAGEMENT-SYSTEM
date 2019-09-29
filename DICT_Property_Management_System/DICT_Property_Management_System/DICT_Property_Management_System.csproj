@@ -242,6 +242,7 @@
     <Compile Include="Property_Record.Designer.cs">
       <DependentUpon>Property_Record.cs</DependentUpon>
     </Compile>
+    <Compile Include="P_Assign.cs" />
     <Compile Include="P_Disposal.cs" />
     <Compile Include="P_Employee.cs" />
     <Compile Include="P_EqpCard.cs" />
