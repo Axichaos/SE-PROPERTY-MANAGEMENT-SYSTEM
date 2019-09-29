@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC2CD738-662E-4012-8641-A19A997DF974}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DICT_Property_Management_System</RootNamespace>
+    <AssemblyName>DICT_Property_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDemo.Designer.cs">
+      <DependentUpon>frmDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmD_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmD_Edit.Designer.cs">
+      <DependentUpon>frmD_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEC_CAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEC_CAdd.Designer.cs">
+      <DependentUpon>frmEC_CAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEC_CEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEC_CEdit.Designer.cs">
+      <DependentUpon>frmEC_CEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEC_LAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEC_LAdd.Designer.cs">
+      <DependentUpon>frmEC_LAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEC_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEC_View.Designer.cs">
+      <DependentUpon>frmEC_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEM_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEM_Add.Designer.cs">
+      <DependentUpon>frmEM_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEM_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEM_Edit.Designer.cs">
+      <DependentUpon>frmEM_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEM_VLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEM_VLE.Designer.cs">
+      <DependentUpon>frmEM_VLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLO_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLO_Add.Designer.cs">
+      <DependentUpon>frmLO_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLO_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLO_Edit.Designer.cs">
+      <DependentUpon>frmLO_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLO_VLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLO_VLE.Designer.cs">
+      <DependentUpon>frmLO_VLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Add.Designer.cs">
+      <DependentUpon>frmL_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Edit.Designer.cs">
+      <DependentUpon>frmL_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPI_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPI_Add.Designer.cs">
+      <DependentUpon>frmPI_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPI_Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPI_Transfer.Designer.cs">
+      <DependentUpon>frmPI_Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPI_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPI_Update.Designer.cs">
+      <DependentUpon>frmPI_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmR_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmR_Add.Designer.cs">
+      <DependentUpon>frmR_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmR_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmR_Edit.Designer.cs">
+      <DependentUpon>frmR_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inputValidation.cs" />
+    <Compile Include="MAIN_UI_DESIGN_TEMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAIN_UI_DESIGN_TEMP.Designer.cs">
+      <DependentUpon>MAIN_UI_DESIGN_TEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Assign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Assign.Designer.cs">
+      <DependentUpon>Property_Assign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Disposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Disposal.Designer.cs">
+      <DependentUpon>Property_Disposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Employee.Designer.cs">
+      <DependentUpon>Property_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_EqpCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_EqpCard.Designer.cs">
+      <DependentUpon>Property_EqpCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_EqpLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_EqpLogs.Designer.cs">
+      <DependentUpon>Property_EqpLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Property_Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property_Inventory_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Inventory_Details.Designer.cs">
+      <DependentUpon>Property_Inventory_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Location.Designer.cs">
+      <DependentUpon>Property_Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Log.Designer.cs">
+      <DependentUpon>Property_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Login.Designer.cs">
+      <DependentUpon>Property_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Logs.Designer.cs">
+      <DependentUpon>Property_Logs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property_Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property_Record.Designer.cs">
+      <DependentUpon>Property_Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Disposal.cs" />
+    <Compile Include="P_Employee.cs" />
+    <Compile Include="P_EqpCard.cs" />
+    <Compile Include="P_Inventory.cs" />
+    <Compile Include="P_Location.cs" />
+    <Compile Include="P_Record.cs" />
+    <Compile Include="P_User.cs" />
+    <EmbeddedResource Include="frmDemo.resx">
+      <DependentUpon>frmDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmD_Edit.resx">
+      <DependentUpon>frmD_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEC_CAdd.resx">
+      <DependentUpon>frmEC_CAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEC_CEdit.resx">
+      <DependentUpon>frmEC_CEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEC_LAdd.resx">
+      <DependentUpon>frmEC_LAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEC_View.resx">
+      <DependentUpon>frmEC_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEM_Add.resx">
+      <DependentUpon>frmEM_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEM_Edit.resx">
+      <DependentUpon>frmEM_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEM_VLE.resx">
+      <DependentUpon>frmEM_VLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLO_Add.resx">
+      <DependentUpon>frmLO_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLO_Edit.resx">
+      <DependentUpon>frmLO_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLO_VLE.resx">
+      <DependentUpon>frmLO_VLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Add.resx">
+      <DependentUpon>frmL_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Edit.resx">
+      <DependentUpon>frmL_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPI_Add.resx">
+      <DependentUpon>frmPI_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPI_Transfer.resx">
+      <DependentUpon>frmPI_Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPI_Update.resx">
+      <DependentUpon>frmPI_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmR_Add.resx">
+      <DependentUpon>frmR_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmR_Edit.resx">
+      <DependentUpon>frmR_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAIN_UI_DESIGN_TEMP.resx">
+      <DependentUpon>MAIN_UI_DESIGN_TEMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Property_Assign.resx">
+      <DependentUpon>Property_Assign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Disposal.resx">
+      <DependentUpon>Property_Disposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Employee.resx">
+      <DependentUpon>Property_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_EqpCard.resx">
+      <DependentUpon>Property_EqpCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_EqpLogs.resx">
+      <DependentUpon>Property_EqpLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Inventory.resx">
+      <DependentUpon>Property_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Inventory_Details.resx">
+      <DependentUpon>Property_Inventory_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Location.resx">
+      <DependentUpon>Property_Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Log.resx">
+      <DependentUpon>Property_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Login.resx">
+      <DependentUpon>Property_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Logs.resx">
+      <DependentUpon>Property_Logs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property_Record.resx">
+      <DependentUpon>Property_Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAIN UI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Big_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DICT123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DICTbanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disposed property.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitorsystemunita.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitorsystemunita1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit card details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit card details1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit card details2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\track.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipment card1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-employee edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
