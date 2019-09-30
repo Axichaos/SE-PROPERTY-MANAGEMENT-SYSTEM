@@ -84,3 +84,4 @@ C:\Users\jibre\Documents\SE-SOFTWARE\DICT_Property_Management_System\DICT_Proper
 C:\Users\jibre\Documents\SE-SOFTWARE\DICT_Property_Management_System\DICT_Property_Management_System\obj\Debug\DICT_Property_Management_System.exe
 C:\Users\jibre\Documents\SE-SOFTWARE\DICT_Property_Management_System\DICT_Property_Management_System\obj\Debug\DICT_Property_Management_System.pdb
 C:\Users\jibre\Documents\SE-SOFTWARE\DICT_Property_Management_System\DICT_Property_Management_System\obj\Debug\DICT_Property_Management_System.Property_Assign.resources
+C:\Users\jibre\Documents\SE-SOFTWARE\DICT_Property_Management_System\DICT_Property_Management_System\obj\Debug\DICT_Property_Management_System.frmAS_Assign.resources

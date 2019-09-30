@@ -30,6 +30,10 @@ namespace DICT_Property_Management_System
             while (dr.Read())
             {
                 ListViewItem tbli = new ListViewItem();
+                if (dr.GetString(3) == "1" && dr.GetString(4) == "1")
+                {
+                    tbli.ForeColor = System.Drawing.Color.Green;
+                }
                 tbli.SubItems.Add(dr.GetString(0));
                 for (int x = 1;x<=4;x++)
                 {

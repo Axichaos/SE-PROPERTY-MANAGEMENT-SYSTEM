@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAS_Assign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAS_Assign.Designer.cs">
+      <DependentUpon>frmAS_Assign.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDemo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,9 @@
     <Compile Include="P_Location.cs" />
     <Compile Include="P_Record.cs" />
     <Compile Include="P_User.cs" />
+    <EmbeddedResource Include="frmAS_Assign.resx">
+      <DependentUpon>frmAS_Assign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDemo.resx">
       <DependentUpon>frmDemo.cs</DependentUpon>
     </EmbeddedResource>

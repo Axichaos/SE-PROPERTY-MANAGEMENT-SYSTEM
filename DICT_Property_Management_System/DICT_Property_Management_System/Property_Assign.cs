@@ -53,7 +53,7 @@ namespace DICT_Property_Management_System
                 else
                 {
                     pbEmp.Image = null;
-                }
+                }               
             }
         }
 
@@ -66,6 +66,30 @@ namespace DICT_Property_Management_System
             lblProv.Text = "?";
             lblRoom.Text = "?";
             pbEmp.Image = null;
+            foreach (ListViewItem check in tblAsiProp.CheckedItems)
+            {
+                check.Checked = false;
+            }
+        }
+
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            if (tblAsiProp.CheckedItems.Count > 0)
+            {
+                ListViewItem[] tempcol = new ListViewItem[tblAsiProp.CheckedItems.Count];
+                int counter = 0;
+                foreach (ListViewItem selprop in tblAsiProp.CheckedItems)
+                {
+                    tempcol[counter] = selprop;
+                    counter++;
+                }
+                frmAS_Assign wind = new frmAS_Assign(tempcol, this);
+                wind.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No properties selected! Please check the properties that you want to assign!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

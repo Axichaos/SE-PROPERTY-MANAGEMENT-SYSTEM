@@ -63,7 +63,7 @@ namespace DICT_Property_Management_System
                 {
                     if (inpc.EmptyCheck(groupBox1.Controls,1))
                     {
-                        int counter = 1;
+                        int counter = 0;
                         foreach (ListViewItem serno in lvwSerial.Items)
                         {
                             counter++;
