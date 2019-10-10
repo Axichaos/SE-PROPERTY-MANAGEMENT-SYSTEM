@@ -86,5 +86,10 @@ namespace DICT_Property_Management_System
             Property_Assign wind = new Property_Assign();
             wind.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

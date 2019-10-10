@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2019 at 10:08 AM
+-- Generation Time: Oct 01, 2019 at 08:21 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -30,6 +30,12 @@ DELIMITER $$
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `acccheck` (IN `un` VARCHAR(255), IN `pass` VARCHAR(255))  NO SQL
 SELECT * FROM tbluser WHERE tbluser.uname = un AND tbluser.password = pass$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `assigntblshow` ()  NO SQL
+SELECT tblproperty.inven_no,tblproperty.name,tblproperty.serialno_plateno,tblproperty.loc_id,tblproperty.accp_id FROM tblproperty WHERE tblproperty.status = "UNDISPOSED"$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `assignupdlocemp` (IN `invno` VARCHAR(255), IN `empid` INT, IN `locid` INT)  NO SQL
+UPDATE tblproperty SET tblproperty.loc_id = locid, tblproperty.accp_id = empid WHERE tblproperty.inven_no = invno$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `dispdelete` (IN `did` INT)  NO SQL
 DELETE FROM tbldisposal WHERE tbldisposal.disp_id = did$$
@@ -151,8 +157,8 @@ SELECT * FROM tblproperty$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `invtodispo` (IN `pk` VARCHAR(255), IN `dpk` INT)  NO SQL
 UPDATE tblproperty SET tblproperty.disp_no = dpk,tblproperty.status = "DISPOSED" WHERE tblproperty.inven_no = pk$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `invupdate` (IN `un` VARCHAR(255), IN `typ` VARCHAR(255), IN `rem` VARCHAR(255), IN `art` VARCHAR(255), IN `co` FLOAT, IN `des` VARCHAR(255), IN `locid` INT, IN `serial` VARCHAR(255), IN `accpid` INT, IN `accc` VARCHAR(255), IN `pk` VARCHAR(255), IN `name` VARCHAR(255), IN `sign` VARCHAR(255), IN `rct` VARCHAR(255), IN `rci` VARCHAR(255), IN `dateacq` VARCHAR(255))  NO SQL
-UPDATE tblproperty SET tblproperty.name = name,tblproperty.unit = un,tblproperty.type = typ,tblproperty.remarks = rem,tblproperty.article = art,tblproperty.cost = co,tblproperty.description = des,tblproperty.loc_id = locid, tblproperty.serialno_plateno = serial, tblproperty.accp_id = accpid, tblproperty.acc_code = accc, tblproperty.signed = sign, tblproperty.rcpt_type = rct, tblproperty.rcpt_iss = rci, tblproperty.date_acq = dateacq WHERE tblproperty.inven_no = pk$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `invupdate` (IN `un` VARCHAR(255), IN `typ` VARCHAR(255), IN `rem` VARCHAR(255), IN `art` VARCHAR(255), IN `co` FLOAT, IN `des` VARCHAR(255), IN `serial` VARCHAR(255), IN `accc` VARCHAR(255), IN `pk` VARCHAR(255), IN `name` VARCHAR(255), IN `sign` VARCHAR(255), IN `rct` VARCHAR(255), IN `rci` VARCHAR(255), IN `dateacq` VARCHAR(255))  NO SQL
+UPDATE tblproperty SET tblproperty.name = name,tblproperty.unit = un,tblproperty.type = typ,tblproperty.remarks = rem,tblproperty.article = art,tblproperty.cost = co,tblproperty.description = des, tblproperty.serialno_plateno = serial, tblproperty.acc_code = accc, tblproperty.signed = sign, tblproperty.rcpt_type = rct, tblproperty.rcpt_iss = rci, tblproperty.date_acq = dateacq WHERE tblproperty.inven_no = pk$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `linkcardlogadd` (IN `cardid` INT, IN `invno` VARCHAR(255))  NO SQL
 INSERT INTO tbllinkcardtolog(tbllinkcardtolog.card_id,tbllinkcardtolog.inven_no) VALUES(cardid,invno)$$
@@ -326,11 +332,43 @@ CREATE TABLE `tbleqplog` (
 --
 
 INSERT INTO `tbleqplog` (`log_id`, `r_date`, `mrd_to`, `inv_no`, `remarks`, `r_status`, `r_current`, `Balance`) VALUES
-(155, '9/27/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NOTE-92720192F', 'Property Record Created at 4:00 AM', 'GENERATED', 'Current', 50),
-(156, '9/27/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NOTE-92720193O', 'Property Record Created at 4:00 AM', 'GENERATED', 'Current', 50),
-(157, '9/27/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NOTE-92720194C', 'Property Record Created at 4:00 AM', 'GENERATED', 'Current', 50),
-(158, '9/27/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NOTE-92720195U', 'Property Record Created at 4:00 AM', 'GENERATED', 'Current', 50),
-(159, '9/27/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NOTE-92720196X', 'Property Record Created at 4:00 AM', 'GENERATED', 'Current', 50);
+(169, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812331I', 'Property Record Created at 1:41 AM', 'GENERATED', 'Past', 190234),
+(170, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812332P', 'Property Record Created at 1:41 AM', 'GENERATED', 'Past', 190234),
+(171, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812333C', 'Property Record Created at 1:41 AM', 'GENERATED', 'Past', 190234),
+(172, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812334N', 'Property Record Created at 1:41 AM', 'GENERATED', 'Past', 190234),
+(173, '10/2/2019', 'asdasdasd/adasd-ddd', 'INV-NO-90812331I', 'Property sent/be sent at  1:41 AM', 'SENT', 'Past', 0),
+(174, '10/2/2019', 'asdasdasd/adasd-ddd', 'INV-NO-90812331I', 'Accountable Officer changed at 1:41 AM', 'CHANGE', 'Past', 0),
+(175, '10/2/2019', 'asdasdasd/adasd-ddd', 'INV-NO-90812332P', 'Property sent/be sent at  1:41 AM', 'SENT', 'Past', 0),
+(176, '10/2/2019', 'asdasdasd/adasd-ddd', 'INV-NO-90812332P', 'Accountable Officer changed at 1:41 AM', 'CHANGE', 'Past', 0),
+(177, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812333C', 'Property sent/be sent at  1:45 AM', 'SENT', 'Past', 0),
+(178, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812333C', 'Accountable Officer changed at 1:45 AM', 'CHANGE', 'Past', 0),
+(179, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812334N', 'Property sent/be sent at  1:45 AM', 'SENT', 'Past', 0),
+(180, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812334N', 'Accountable Officer changed at 1:45 AM', 'CHANGE', 'Past', 0),
+(181, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812333C', 'Property sent/be sent at  1:47 AM', 'SENT', 'Past', 0),
+(182, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812333C', 'Accountable Officer changed at 1:47 AM', 'CHANGE', 'Past', 0),
+(183, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812334N', 'Property sent/be sent at  1:47 AM', 'SENT', 'Past', 0),
+(184, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812334N', 'Accountable Officer changed at 1:47 AM', 'CHANGE', 'Past', 0),
+(185, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812331I', 'Property sent/be sent at  1:48 AM', 'SENT', 'Past', 0),
+(186, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812331I', 'Accountable Officer changed at 1:48 AM', 'CHANGE', 'Current', 0),
+(187, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812332P', 'Property sent/be sent at  1:48 AM', 'SENT', 'Past', 0),
+(188, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812332P', 'Accountable Officer changed at 1:49 AM', 'CHANGE', 'Current', 0),
+(189, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812333C', 'Property sent/be sent at  1:49 AM', 'SENT', 'Past', 0),
+(190, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812333C', 'Accountable Officer changed at 1:49 AM', 'CHANGE', 'Past', 0),
+(191, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812334N', 'Property sent/be sent at  1:49 AM', 'SENT', 'Past', 0),
+(192, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'INV-NO-90812334N', 'Accountable Officer changed at 1:49 AM', 'CHANGE', 'Past', 0),
+(193, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812333C', 'Property returned at  1:49 AM', 'RETURN', 'Past', 0),
+(194, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812333C', 'Accountable Officer changed at 1:49 AM', 'CHANGE', 'Current', 0),
+(195, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812334N', 'Property returned at  1:49 AM', 'RETURN', 'Past', 0),
+(196, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'INV-NO-90812334N', 'Accountable Officer changed at 1:49 AM', 'CHANGE', 'Current', 0),
+(197, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'InvNo-90181Y', 'Property Record Created at 2:14 AM', 'GENERATED', 'Past', 1099),
+(198, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'InvNo-90182E', 'Property Record Created at 2:14 AM', 'GENERATED', 'Past', 1099),
+(199, '10/2/2019', 'Axichaoss/DICT-BUILDING-ZC-Supply Room', 'InvNo-90183Y', 'Property Record Created at 2:14 AM', 'GENERATED', 'Past', 1099),
+(200, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'InvNo-90181Y', 'Property sent/be sent at  2:17 AM', 'SENT', 'Past', 0),
+(201, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'InvNo-90181Y', 'Accountable Officer changed at 2:17 AM', 'CHANGE', 'Current', 0),
+(202, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'InvNo-90182E', 'Property sent/be sent at  2:17 AM', 'SENT', 'Past', 0),
+(203, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'InvNo-90182E', 'Accountable Officer changed at 2:17 AM', 'CHANGE', 'Current', 0),
+(204, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'InvNo-90183Y', 'Property sent/be sent at  2:17 AM', 'SENT', 'Past', 0),
+(205, '10/2/2019', 'asdasdasd/Sulu Harbourfront-Docking Bay', 'InvNo-90183Y', 'Accountable Officer changed at 2:17 AM', 'CHANGE', 'Current', 0);
 
 -- --------------------------------------------------------
 
@@ -412,11 +450,9 @@ CREATE TABLE `tblproperty` (
 --
 
 INSERT INTO `tblproperty` (`inven_no`, `name`, `unit`, `type`, `remarks`, `article`, `cost`, `description`, `loc_id`, `serialno_plateno`, `accp_id`, `acc_code`, `status`, `disp_no`, `signed`, `rcpt_type`, `rcpt_iss`, `date_acq`) VALUES
-('INV-NOTE-92720192F', 'Notebooks', 'Piece', 'Furniture', 'Notebook for meeting', 'ART-9087612', 50, 'A 50 page notebook', 1, 'SN-456-2019', 1, '1-06-05-070', 'UNDISPOSED', NULL, 'Yes', 'PAR', 'Yes', '9/27/2019'),
-('INV-NOTE-92720193O', 'Notebooks', 'Piece', 'Furniture', 'Notebook for meeting', 'ART-9087612', 50, 'A 50 page notebook', 1, 'SN-587-2019', 1, '1-06-05-070', 'UNDISPOSED', NULL, 'Yes', 'PAR', 'Yes', '9/27/2019'),
-('INV-NOTE-92720194C', 'Notebooks', 'Piece', 'Furniture', 'Notebook for meeting', 'ART-9087612', 50, 'A 50 page notebook', 1, 'SN-387-2019', 1, '1-06-05-070', 'UNDISPOSED', NULL, 'Yes', 'PAR', 'Yes', '9/27/2019'),
-('INV-NOTE-92720195U', 'Notebooks', 'Piece', 'Furniture', 'Notebook for meeting', 'ART-9087612', 50, 'A 50 page notebook', 1, 'SN-901-2019', 1, '1-06-05-070', 'UNDISPOSED', NULL, 'Yes', 'PAR', 'Yes', '9/27/2019'),
-('INV-NOTE-92720196X', 'Notebooks', 'Piece', 'Furniture', 'Notebook for meeting', 'ART-9087612', 50, 'A 50 page notebook', 1, 'SN-607-2019', 1, '1-06-05-070', 'UNDISPOSED', NULL, 'Yes', 'PAR', 'Yes', '9/27/2019');
+('InvNo-90181Y', 'Acer', 'Set', 'Equipment', 'adad', 'ART-90', 1099, 'ddd', 2, 'YUN', 4, '1-06-99-990', 'UNDISPOSED', NULL, 'No', 'PAR', 'No', '10/2/2019'),
+('InvNo-90182E', 'Acer', 'Set', 'Equipment', 'adad', 'ART-90', 1099, 'ddd', 2, 'JUN', 4, '1-06-99-990', 'UNDISPOSED', NULL, 'No', 'PAR', 'No', '10/2/2019'),
+('InvNo-90183Y', 'Acer', 'Set', 'Furniture', 'adadasddd', 'ART-9033', 1099, 'ddd1233', 2, 'GUN123', 4, '1-06-05-070', 'UNDISPOSED', NULL, 'Yes', 'ICS', 'Yes', '10/14/2019');
 
 -- --------------------------------------------------------
 
@@ -527,7 +563,7 @@ ALTER TABLE `tblemployee`
 -- AUTO_INCREMENT for table `tbleqpcardid`
 --
 ALTER TABLE `tbleqpcardid`
-  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbleqphistory`
@@ -539,13 +575,13 @@ ALTER TABLE `tbleqphistory`
 -- AUTO_INCREMENT for table `tbleqplog`
 --
 ALTER TABLE `tbleqplog`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=206;
 
 --
 -- AUTO_INCREMENT for table `tbllinkcardtolog`
 --
 ALTER TABLE `tbllinkcardtolog`
-  MODIFY `linkid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `linkid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbllocation`

@@ -33,6 +33,8 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblEmailAdd = new System.Windows.Forms.Label();
             this.lblEmpCont = new System.Windows.Forms.Label();
@@ -56,9 +58,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAssign = new System.Windows.Forms.Button();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblDept = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblJobT = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmp)).BeginInit();
             this.gbLoc.SuspendLayout();
@@ -100,9 +104,23 @@
             this.columnHeader3.Text = "Serial No.";
             this.columnHeader3.Width = 136;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Location";
+            this.columnHeader4.Width = 0;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Employee";
+            this.columnHeader5.Width = 0;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Controls.Add(this.lblJobT);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.lblDept);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.lblEmailAdd);
             this.groupBox1.Controls.Add(this.lblEmpCont);
             this.groupBox1.Controls.Add(this.lblEmpName);
@@ -113,7 +131,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(387, 136);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(424, 192);
+            this.groupBox1.Size = new System.Drawing.Size(424, 300);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee";
@@ -122,7 +140,7 @@
             // 
             this.lblEmailAdd.AutoSize = true;
             this.lblEmailAdd.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailAdd.Location = new System.Drawing.Point(190, 159);
+            this.lblEmailAdd.Location = new System.Drawing.Point(190, 149);
             this.lblEmailAdd.Name = "lblEmailAdd";
             this.lblEmailAdd.Size = new System.Drawing.Size(21, 24);
             this.lblEmailAdd.TabIndex = 6;
@@ -132,7 +150,7 @@
             // 
             this.lblEmpCont.AutoSize = true;
             this.lblEmpCont.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpCont.Location = new System.Drawing.Point(192, 101);
+            this.lblEmpCont.Location = new System.Drawing.Point(192, 95);
             this.lblEmpCont.Name = "lblEmpCont";
             this.lblEmpCont.Size = new System.Drawing.Size(21, 24);
             this.lblEmpCont.TabIndex = 5;
@@ -142,7 +160,7 @@
             // 
             this.lblEmpName.AutoSize = true;
             this.lblEmpName.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpName.Location = new System.Drawing.Point(191, 43);
+            this.lblEmpName.Location = new System.Drawing.Point(191, 41);
             this.lblEmpName.Name = "lblEmpName";
             this.lblEmpName.Size = new System.Drawing.Size(21, 24);
             this.lblEmpName.TabIndex = 4;
@@ -152,7 +170,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(191, 135);
+            this.label6.Location = new System.Drawing.Point(191, 127);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 14);
             this.label6.TabIndex = 3;
@@ -162,7 +180,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(192, 77);
+            this.label5.Location = new System.Drawing.Point(192, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 14);
             this.label5.TabIndex = 2;
@@ -193,7 +211,7 @@
             // 
             this.cboLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoc.FormattingEnabled = true;
-            this.cboLoc.Location = new System.Drawing.Point(387, 334);
+            this.cboLoc.Location = new System.Drawing.Point(387, 453);
             this.cboLoc.Name = "cboLoc";
             this.cboLoc.Size = new System.Drawing.Size(424, 21);
             this.cboLoc.TabIndex = 63;
@@ -222,12 +240,12 @@
             this.gbLoc.Controls.Add(this.lblRoom);
             this.gbLoc.Controls.Add(this.label12);
             this.gbLoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLoc.Location = new System.Drawing.Point(387, 363);
+            this.gbLoc.Location = new System.Drawing.Point(387, 482);
             this.gbLoc.Name = "gbLoc";
             this.gbLoc.Size = new System.Drawing.Size(424, 138);
             this.gbLoc.TabIndex = 64;
             this.gbLoc.TabStop = false;
-            this.gbLoc.Text = "Employee";
+            this.gbLoc.Text = "Location";
             // 
             // label7
             // 
@@ -346,16 +364,7 @@
             this.btnAssign.TabIndex = 67;
             this.btnAssign.Text = "Assign";
             this.btnAssign.UseVisualStyleBackColor = true;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Location";
-            this.columnHeader4.Width = 0;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Employee";
-            this.columnHeader5.Width = 0;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // btnClose
             // 
@@ -367,12 +376,52 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lblDept
+            // 
+            this.lblDept.AutoSize = true;
+            this.lblDept.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDept.Location = new System.Drawing.Point(190, 257);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.Size = new System.Drawing.Size(21, 24);
+            this.lblDept.TabIndex = 8;
+            this.lblDept.Text = "?";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(191, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 14);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Department";
+            // 
+            // lblJobT
+            // 
+            this.lblJobT.AutoSize = true;
+            this.lblJobT.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobT.Location = new System.Drawing.Point(192, 203);
+            this.lblJobT.Name = "lblJobT";
+            this.lblJobT.Size = new System.Drawing.Size(21, 24);
+            this.lblJobT.TabIndex = 10;
+            this.lblJobT.Text = "?";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(193, 181);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 14);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Job Title";
+            // 
             // frmAS_Assign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(823, 539);
+            this.ClientSize = new System.Drawing.Size(823, 632);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAssign);
             this.Controls.Add(this.label2);
@@ -384,6 +433,7 @@
             this.Controls.Add(this.tblSelProp);
             this.Name = "frmAS_Assign";
             this.Text = "frmAS_Assign";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAS_Assign_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmp)).EndInit();
@@ -429,5 +479,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblJobT;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblDept;
+        private System.Windows.Forms.Label label8;
     }
 }

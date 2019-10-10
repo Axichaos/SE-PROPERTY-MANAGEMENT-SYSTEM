@@ -44,5 +44,17 @@ namespace DICT_Property_Management_System
             dr.Dispose();
             dbclose();
         }
+        //Assign Update employee and location
+        public void asiupdate(string asd1,string asd2,string asd3)
+        {
+            pms_sql.Open();
+            pms_cmd = new MySqlCommand("assignupdlocemp", pms_sql);
+            pms_cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            pms_cmd.Parameters.AddWithValue("@invno", asd1);
+            pms_cmd.Parameters.AddWithValue("@empid", asd2);
+            pms_cmd.Parameters.AddWithValue("@locid", asd3);
+            pms_cmd.ExecuteNonQuery();
+            dbclose();
+        }
     }
 }

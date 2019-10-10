@@ -124,7 +124,7 @@ namespace DICT_Property_Management_System
             dbclose();
         }
         //Inventory Update
-        public void invupdate(string pck, string pc2, string pc3, string pc4, string pc5, string pc6, string pc7, string pc8, string pc9, string pc10, string pc11, string pc12, string pc13, string pc14, string pc15, string pc16)
+        public void invupdate(string pck, string pc2, string pc3, string pc4, string pc5, string pc6, string pc7, string pc8, string pc10, string pc12, string pc13, string pc14, string pc15, string pc16)
         {
             pms_sql.Open();
             pms_cmd = new MySqlCommand("invupdate", pms_sql);
@@ -136,9 +136,7 @@ namespace DICT_Property_Management_System
             pms_cmd.Parameters.AddWithValue("@art", pc6);
             pms_cmd.Parameters.AddWithValue("@co", pc7);
             pms_cmd.Parameters.AddWithValue("@des", pc8);
-            pms_cmd.Parameters.AddWithValue("@locid", pc9);
             pms_cmd.Parameters.AddWithValue("@serial", pc10);
-            pms_cmd.Parameters.AddWithValue("@accpid", pc11);
             pms_cmd.Parameters.AddWithValue("@accc", pc12);
             pms_cmd.Parameters.AddWithValue("@sign", pc13);
             pms_cmd.Parameters.AddWithValue("@rct", pc14);

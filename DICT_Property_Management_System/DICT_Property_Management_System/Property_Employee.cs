@@ -13,7 +13,7 @@ namespace DICT_Property_Management_System
     public partial class Property_Employee : Form
     {
         P_Employee con = new P_Employee();
-        string[] lbl = new string[4];
+        string[] lbl = new string[6];
         string tempid;
         public Property_Employee()
         {
@@ -36,6 +36,8 @@ namespace DICT_Property_Management_System
             lblName.Text = "?";
             lblCont.Text = "?";
             lblEmail.Text = "?";
+            lblJobT.Text = "?";
+            lblDept.Text = "?";
             pbEmp.Image = null;
         }
 
@@ -48,6 +50,8 @@ namespace DICT_Property_Management_System
                 lblName.Text = lbl[0];
                 lblCont.Text = lbl[1];
                 lblEmail.Text = lbl[2];
+                lblJobT.Text = lbl[4];
+                lblDept.Text = lbl[5];
                 if (tempid == "1")
                 {
                     btnDelete.Enabled = false;
@@ -120,6 +124,11 @@ namespace DICT_Property_Management_System
                 frmEM_VLE wind = new frmEM_VLE(tempid);
                 wind.ShowDialog();
             }            
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

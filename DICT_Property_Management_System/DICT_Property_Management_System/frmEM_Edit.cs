@@ -20,7 +20,7 @@ namespace DICT_Property_Management_System
         String emtemp;
         string emppk;
         string pics;
-        string[] lblset = new string[4];
+        string[] lblset = new string[6];
         public frmEM_Edit(Property_Employee tempfrm,string tempid)
         {
             InitializeComponent();
@@ -31,6 +31,8 @@ namespace DICT_Property_Management_System
             txtContact.Text = lblset[1];
             txtEmail.Text = lblset[2];
             pics = lblset[3];
+            txtJobT.Text = lblset[4];
+            cboDept.Text = lblset[5];
             if (lblset[3] != "N/U")
             {
                 pbEmp.Image = new Bitmap(pics);
@@ -63,7 +65,7 @@ namespace DICT_Property_Management_System
         {
             if(inpc.EmptyCheck(Controls))
             {
-                con.empedit(txtEName.Text, txtContact.Text, txtEmail.Text, pics, emppk);
+                con.empedit(txtEName.Text, txtContact.Text, txtEmail.Text, pics,txtJobT.Text,cboDept.Text, emppk);
                 clo.tblshow();
                 clo.cleardetail();
                 this.Close();

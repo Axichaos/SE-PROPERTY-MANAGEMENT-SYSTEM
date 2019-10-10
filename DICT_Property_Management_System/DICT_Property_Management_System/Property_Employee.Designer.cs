@@ -36,6 +36,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.picEmp = new System.Windows.Forms.GroupBox();
+            this.btnEmVLE = new System.Windows.Forms.Button();
             this.lblCont = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -46,7 +47,10 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEmVLE = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblJobT = new System.Windows.Forms.Label();
+            this.lblDept = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.picEmp.SuspendLayout();
@@ -80,7 +84,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 59);
+            this.panel1.Size = new System.Drawing.Size(967, 59);
             this.panel1.TabIndex = 5;
             // 
             // tblEmployee
@@ -90,6 +94,7 @@
             this.columnHeader6});
             this.tblEmployee.FullRowSelect = true;
             this.tblEmployee.GridLines = true;
+            this.tblEmployee.HideSelection = false;
             this.tblEmployee.Location = new System.Drawing.Point(12, 65);
             this.tblEmployee.Name = "tblEmployee";
             this.tblEmployee.Size = new System.Drawing.Size(316, 309);
@@ -111,6 +116,10 @@
             // picEmp
             // 
             this.picEmp.BackColor = System.Drawing.Color.SteelBlue;
+            this.picEmp.Controls.Add(this.lblDept);
+            this.picEmp.Controls.Add(this.label7);
+            this.picEmp.Controls.Add(this.lblJobT);
+            this.picEmp.Controls.Add(this.label5);
             this.picEmp.Controls.Add(this.btnEmVLE);
             this.picEmp.Controls.Add(this.lblCont);
             this.picEmp.Controls.Add(this.lblEmail);
@@ -121,49 +130,61 @@
             this.picEmp.Controls.Add(this.pbEmp);
             this.picEmp.Location = new System.Drawing.Point(334, 65);
             this.picEmp.Name = "picEmp";
-            this.picEmp.Size = new System.Drawing.Size(399, 394);
+            this.picEmp.Size = new System.Drawing.Size(619, 355);
             this.picEmp.TabIndex = 7;
             this.picEmp.TabStop = false;
             this.picEmp.Text = "Employee Details";
             // 
+            // btnEmVLE
+            // 
+            this.btnEmVLE.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmVLE.Location = new System.Drawing.Point(41, 279);
+            this.btnEmVLE.Name = "btnEmVLE";
+            this.btnEmVLE.Size = new System.Drawing.Size(151, 29);
+            this.btnEmVLE.TabIndex = 12;
+            this.btnEmVLE.Text = "View Linked Entries";
+            this.btnEmVLE.UseVisualStyleBackColor = true;
+            this.btnEmVLE.Click += new System.EventHandler(this.btnEmVLE_Click);
+            // 
             // lblCont
             // 
             this.lblCont.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCont.Location = new System.Drawing.Point(183, 272);
+            this.lblCont.Location = new System.Drawing.Point(228, 115);
             this.lblCont.Name = "lblCont";
             this.lblCont.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCont.Size = new System.Drawing.Size(210, 26);
+            this.lblCont.Size = new System.Drawing.Size(375, 26);
             this.lblCont.TabIndex = 6;
             this.lblCont.Text = "?";
-            this.lblCont.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblCont.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lblEmail
             // 
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(183, 313);
+            this.lblEmail.Location = new System.Drawing.Point(228, 181);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblEmail.Size = new System.Drawing.Size(210, 26);
+            this.lblEmail.Size = new System.Drawing.Size(375, 26);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "?";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(183, 234);
+            this.lblName.Location = new System.Drawing.Point(228, 49);
             this.lblName.Name = "lblName";
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblName.Size = new System.Drawing.Size(210, 26);
+            this.lblName.Size = new System.Drawing.Size(375, 26);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "?";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 312);
+            this.label4.Location = new System.Drawing.Point(228, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(175, 26);
             this.label4.TabIndex = 3;
@@ -173,7 +194,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 271);
+            this.label3.Location = new System.Drawing.Point(228, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 26);
             this.label3.TabIndex = 2;
@@ -183,7 +204,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 233);
+            this.label2.Location = new System.Drawing.Point(228, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 26);
             this.label2.TabIndex = 1;
@@ -194,7 +215,7 @@
             this.pbEmp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbEmp.BackgroundImage")));
             this.pbEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbEmp.InitialImage = null;
-            this.pbEmp.Location = new System.Drawing.Point(94, 20);
+            this.pbEmp.Location = new System.Drawing.Point(11, 62);
             this.pbEmp.Name = "pbEmp";
             this.pbEmp.Size = new System.Drawing.Size(211, 211);
             this.pbEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,23 +255,54 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnEmVLE
+            // label5
             // 
-            this.btnEmVLE.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmVLE.Location = new System.Drawing.Point(125, 355);
-            this.btnEmVLE.Name = "btnEmVLE";
-            this.btnEmVLE.Size = new System.Drawing.Size(151, 29);
-            this.btnEmVLE.TabIndex = 12;
-            this.btnEmVLE.Text = "View Linked Entries";
-            this.btnEmVLE.UseVisualStyleBackColor = true;
-            this.btnEmVLE.Click += new System.EventHandler(this.btnEmVLE_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(228, 214);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 26);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Job Title:";
+            // 
+            // lblJobT
+            // 
+            this.lblJobT.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobT.Location = new System.Drawing.Point(228, 247);
+            this.lblJobT.Name = "lblJobT";
+            this.lblJobT.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblJobT.Size = new System.Drawing.Size(375, 26);
+            this.lblJobT.TabIndex = 14;
+            this.lblJobT.Text = "?";
+            this.lblJobT.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lblDept
+            // 
+            this.lblDept.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDept.Location = new System.Drawing.Point(228, 313);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblDept.Size = new System.Drawing.Size(375, 26);
+            this.lblDept.TabIndex = 16;
+            this.lblDept.Text = "?";
+            this.lblDept.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(228, 280);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 26);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Department:";
             // 
             // Property_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(745, 461);
+            this.ClientSize = new System.Drawing.Size(949, 435);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -289,5 +341,9 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEmVLE;
+        private System.Windows.Forms.Label lblDept;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblJobT;
+        private System.Windows.Forms.Label label5;
     }
 }

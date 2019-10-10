@@ -426,5 +426,38 @@
   <ItemGroup>
     <None Include="Resources\frame icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_Ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EqpCard_ICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory_ICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location_Ico_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disposal_ICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disposal_ICO_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log_ICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports_ICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assign-ICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAIN_SIDE_LOGO_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BIG_DICT_LOGO.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,7 +41,7 @@ namespace DICT_Property_Management_System
                 lblProv.Text = templocarr[1];
                 lblRoom.Text = templocarr[2];
                 string tempemp = tblAsiProp.SelectedItems[0].SubItems[5].Text;
-                string[] tempemparr = new string[4];
+                string[] tempemparr = new string[6];
                 con3.empselected(tempemp, tempemparr);
                 lblEmpName.Text = tempemparr[0];
                 lblEmpCont.Text = tempemparr[1];
@@ -53,7 +53,9 @@ namespace DICT_Property_Management_System
                 else
                 {
                     pbEmp.Image = null;
-                }               
+                }
+                lblJobT.Text = tempemparr[4];
+                lblDept.Text = tempemparr[5];
             }
         }
 
@@ -65,6 +67,8 @@ namespace DICT_Property_Management_System
             lblLoc.Text = "?";
             lblProv.Text = "?";
             lblRoom.Text = "?";
+            lblJobT.Text = "?";
+            lblDept.Text = "?";
             pbEmp.Image = null;
             foreach (ListViewItem check in tblAsiProp.CheckedItems)
             {

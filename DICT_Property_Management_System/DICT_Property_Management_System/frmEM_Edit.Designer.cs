@@ -43,6 +43,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddPic = new System.Windows.Forms.Button();
             this.pbEmp = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboDept = new System.Windows.Forms.ComboBox();
+            this.txtJobT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmp)).BeginInit();
@@ -92,7 +96,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(177, 405);
+            this.btnCancel.Location = new System.Drawing.Point(198, 481);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(128, 29);
             this.btnCancel.TabIndex = 60;
@@ -103,7 +107,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(36, 405);
+            this.btnSave.Location = new System.Drawing.Point(64, 482);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(128, 28);
             this.btnSave.TabIndex = 59;
@@ -192,12 +196,61 @@
             this.pbEmp.TabIndex = 51;
             this.pbEmp.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 436);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 18);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "Department:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(57, 407);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 18);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Job Title :";
+            // 
+            // cboDept
+            // 
+            this.cboDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDept.FormattingEnabled = true;
+            this.cboDept.Items.AddRange(new object[] {
+            "Supply Monitoring Unit",
+            "Administration",
+            "Human Resources",
+            "Security",
+            "Tech4Ed",
+            "Other",
+            "N/A"});
+            this.cboDept.Location = new System.Drawing.Point(143, 435);
+            this.cboDept.Name = "cboDept";
+            this.cboDept.Size = new System.Drawing.Size(183, 21);
+            this.cboDept.TabIndex = 63;
+            // 
+            // txtJobT
+            // 
+            this.txtJobT.Font = new System.Drawing.Font("Bell MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJobT.Location = new System.Drawing.Point(143, 406);
+            this.txtJobT.Name = "txtJobT";
+            this.txtJobT.Size = new System.Drawing.Size(183, 20);
+            this.txtJobT.TabIndex = 62;
+            // 
             // frmEM_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(338, 437);
+            this.ClientSize = new System.Drawing.Size(350, 522);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboDept);
+            this.Controls.Add(this.txtJobT);
             this.Controls.Add(this.btnRemPic);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -237,5 +290,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAddPic;
         private System.Windows.Forms.PictureBox pbEmp;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboDept;
+        private System.Windows.Forms.TextBox txtJobT;
     }
 }

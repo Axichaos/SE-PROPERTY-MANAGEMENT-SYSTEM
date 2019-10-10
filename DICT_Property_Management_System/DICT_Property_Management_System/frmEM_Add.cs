@@ -20,6 +20,7 @@ namespace DICT_Property_Management_System
         {
             InitializeComponent();
             close = temp;
+            cboDept.SelectedIndex = 0;
         }
 
         private void btnAddPic_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace DICT_Property_Management_System
         {
             if (inpc.EmptyCheck(Controls))
             {
-                con.empadd(txtEName.Text, txtContact.Text, txtEmail.Text, picsource);
+                con.empadd(txtEName.Text, txtContact.Text, txtEmail.Text, picsource,txtJobT.Text,cboDept.Text);
                 close.tblshow();
                 close.cleardetail();
                 this.Close();

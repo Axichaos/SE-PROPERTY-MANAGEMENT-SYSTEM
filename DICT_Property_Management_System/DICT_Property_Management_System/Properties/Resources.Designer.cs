@@ -73,6 +73,26 @@ namespace DICT_Property_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Assign_ICO {
+            get {
+                object obj = ResourceManager.GetObject("Assign-ICO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BIG_DICT_LOGO {
+            get {
+                object obj = ResourceManager.GetObject("BIG_DICT_LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Big_Logo {
             get {
                 object obj = ResourceManager.GetObject("Big_Logo", resourceCulture);
@@ -96,6 +116,26 @@ namespace DICT_Property_Management_System.Properties {
         internal static System.Drawing.Bitmap DICTbanner {
             get {
                 object obj = ResourceManager.GetObject("DICTbanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Disposal_ICO {
+            get {
+                object obj = ResourceManager.GetObject("Disposal_ICO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Disposal_ICO_2 {
+            get {
+                object obj = ResourceManager.GetObject("Disposal_ICO_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +183,26 @@ namespace DICT_Property_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Employee_Ico {
+            get {
+                object obj = ResourceManager.GetObject("Employee_Ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EqpCard_ICO {
+            get {
+                object obj = ResourceManager.GetObject("EqpCard_ICO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap equipment_card1 {
             get {
                 object obj = ResourceManager.GetObject("equipment card1", resourceCulture);
@@ -156,6 +216,46 @@ namespace DICT_Property_Management_System.Properties {
         internal static System.Drawing.Bitmap frame_icon {
             get {
                 object obj = ResourceManager.GetObject("frame icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Inventory_ICO {
+            get {
+                object obj = ResourceManager.GetObject("Inventory_ICO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Location_Ico_2 {
+            get {
+                object obj = ResourceManager.GetObject("Location_Ico_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_ICO {
+            get {
+                object obj = ResourceManager.GetObject("Log_ICO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MAIN_SIDE_LOGO_2 {
+            get {
+                object obj = ResourceManager.GetObject("MAIN_SIDE_LOGO_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +286,16 @@ namespace DICT_Property_Management_System.Properties {
         internal static System.Drawing.Bitmap monitorsystemunita1 {
             get {
                 object obj = ResourceManager.GetObject("monitorsystemunita1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Reports_ICO {
+            get {
+                object obj = ResourceManager.GetObject("Reports_ICO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

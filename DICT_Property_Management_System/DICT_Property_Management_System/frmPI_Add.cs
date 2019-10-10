@@ -30,6 +30,9 @@ namespace DICT_Property_Management_System
             cboSign.SelectedIndex = 0;
             cbEmpID.SelectedIndex = 0;
             cbLoc.SelectedIndex = 0;
+            cboAcc.SelectedIndex = 0;
+            cboUnit.SelectedIndex = 0;
+            cboType.SelectedIndex = 0;
             btnAddS.Enabled = false;
             btnRemove.Enabled = false;
             btnClrLvw.Enabled = false;

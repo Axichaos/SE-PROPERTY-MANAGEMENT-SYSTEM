@@ -60,7 +60,7 @@ namespace DICT_Property_Management_System
             dbclose();
         }
         //Employee Add
-        public void empadd(string ec1,string ec2,string ec3,string ec4)
+        public void empadd(string ec1,string ec2,string ec3,string ec4,string ec5,string ec6)
         {
             pms_sql.Open();
             pms_cmd = new MySqlCommand("empadd", pms_sql);
@@ -69,6 +69,8 @@ namespace DICT_Property_Management_System
             pms_cmd.Parameters.AddWithValue("@cont", ec2);
             pms_cmd.Parameters.AddWithValue("@email", ec3);
             pms_cmd.Parameters.AddWithValue("@piclink", ec4);
+            pms_cmd.Parameters.AddWithValue("@jobt", ec5);
+            pms_cmd.Parameters.AddWithValue("@dept", ec6);
             pms_cmd.ExecuteNonQuery();
             dbclose();
         }
@@ -85,11 +87,13 @@ namespace DICT_Property_Management_System
             db[1] = dr.GetString(2);
             db[2] = dr.GetString(3);
             db[3] = dr.GetString(4);
+            db[4] = dr.GetString(5);
+            db[5] = dr.GetString(6);
             dr.Dispose();
             dbclose();
         }
         //Employee Edit 
-        public void empedit(string ec1, string ec2, string ec3, string ec4, string emp)
+        public void empedit(string ec1, string ec2, string ec3, string ec4,string ec5,string ec6,string emp)
         {
             pms_sql.Open();
             pms_cmd = new MySqlCommand("empedit", pms_sql);
@@ -99,6 +103,8 @@ namespace DICT_Property_Management_System
             pms_cmd.Parameters.AddWithValue("@email", ec3);
             pms_cmd.Parameters.AddWithValue("@piclink", ec4);
             pms_cmd.Parameters.AddWithValue("@empid", emp);
+            pms_cmd.Parameters.AddWithValue("@jobt", ec5);
+            pms_cmd.Parameters.AddWithValue("@dept", ec6);
             pms_cmd.ExecuteNonQuery();
             dbclose();
         }
