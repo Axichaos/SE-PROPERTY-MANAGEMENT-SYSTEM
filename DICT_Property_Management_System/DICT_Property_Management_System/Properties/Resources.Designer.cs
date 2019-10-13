@@ -293,6 +293,16 @@ namespace DICT_Property_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PInventory_ICO {
+            get {
+                object obj = ResourceManager.GetObject("PInventory_ICO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Reports_ICO {
             get {
                 object obj = ResourceManager.GetObject("Reports_ICO", resourceCulture);
@@ -326,6 +336,16 @@ namespace DICT_Property_Management_System.Properties {
         internal static System.Drawing.Bitmap User {
             get {
                 object obj = ResourceManager.GetObject("User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap View_ICO {
+            get {
+                object obj = ResourceManager.GetObject("View_ICO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

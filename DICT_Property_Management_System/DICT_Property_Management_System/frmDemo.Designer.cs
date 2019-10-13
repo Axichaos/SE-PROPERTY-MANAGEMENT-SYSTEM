@@ -35,18 +35,17 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -56,11 +55,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDate
@@ -110,7 +110,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label4);
@@ -135,51 +135,45 @@
             this.panel1.Size = new System.Drawing.Size(290, 762);
             this.panel1.TabIndex = 33;
             // 
-            // label1
+            // panel5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 669);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 27);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Welcome, Property Officer";
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Location = new System.Drawing.Point(5, 13);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(278, 77);
+            this.panel5.TabIndex = 38;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Encoding";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(58, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 16);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Property Management System";
             // 
-            // panel2
+            // label5
             // 
-            this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel2.Location = new System.Drawing.Point(5, 123);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 1);
-            this.panel2.TabIndex = 35;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(110, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 19);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "DICT P.M.S";
             // 
-            // panel3
+            // pictureBox1
             // 
-            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel3.Location = new System.Drawing.Point(5, 348);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(270, 1);
-            this.panel3.TabIndex = 37;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 328);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Tracking";
+            this.pictureBox1.Image = global::DICT_Property_Management_System.Properties.Resources.MAIN_SIDE_LOGO_2;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel4
             // 
@@ -199,55 +193,51 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Printing";
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Location = new System.Drawing.Point(5, 13);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(278, 77);
-            this.panel5.TabIndex = 38;
+            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.Location = new System.Drawing.Point(5, 348);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(270, 1);
+            this.panel3.TabIndex = 37;
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(110, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 19);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "DICT P.M.S";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 328);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Tracking";
             // 
-            // label6
+            // panel2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Property Management System";
+            this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.Location = new System.Drawing.Point(5, 123);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(270, 1);
+            this.panel2.TabIndex = 35;
             // 
-            // pictureBox2
+            // label2
             // 
-            this.pictureBox2.Image = global::DICT_Property_Management_System.Properties.Resources.BIG_DICT_LOGO;
-            this.pictureBox2.Location = new System.Drawing.Point(317, 98);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1023, 551);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Encoding";
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.Image = global::DICT_Property_Management_System.Properties.Resources.MAIN_SIDE_LOGO_2;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 669);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(273, 27);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Welcome, Property Officer";
             // 
             // button8
             // 
@@ -265,9 +255,12 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button8.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -280,8 +273,10 @@
             this.button1.TabIndex = 0;
             this.button1.Text = " Inventory";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // pictureBox3
             // 
@@ -309,6 +304,8 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button7.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // button6
             // 
@@ -326,6 +323,8 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button6.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // button5
             // 
@@ -343,6 +342,8 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.button5.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button5.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // button4
             // 
@@ -360,6 +361,8 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button4.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // button2
             // 
@@ -377,6 +380,8 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button2.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // button3
             // 
@@ -393,6 +398,18 @@
             this.button3.Text = "Reports";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button3.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DICT_Property_Management_System.Properties.Resources.BIG_DICT_LOGO;
+            this.pictureBox2.Location = new System.Drawing.Point(317, 98);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1023, 551);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
             // 
             // frmDemo
             // 
@@ -414,9 +431,9 @@
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

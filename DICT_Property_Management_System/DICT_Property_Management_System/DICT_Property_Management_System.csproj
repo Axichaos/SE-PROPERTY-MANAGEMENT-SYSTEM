@@ -459,5 +459,11 @@
   <ItemGroup>
     <None Include="Resources\BIG_DICT_LOGO.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PInventory_ICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View_ICO.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

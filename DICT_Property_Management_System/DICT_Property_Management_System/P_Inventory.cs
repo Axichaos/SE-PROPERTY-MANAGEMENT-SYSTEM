@@ -85,7 +85,7 @@ namespace DICT_Property_Management_System
             {
                 for (int x = 0; x <= 17; x++)
                 {
-                    if(x==13)
+                    if (x==13)
                     {
                         lblarr[x] = "0";
                     }

@@ -91,5 +91,30 @@ namespace DICT_Property_Management_System
         {
 
         }
+        private void bcc(Button b,int i)
+        {
+            if (i == 1)
+            {
+                b.BackColor = Color.FromArgb(0, 0, 192);
+            }
+            else
+            {
+                b.BackColor = Color.FromArgb(0, 0, 64);
+            }
+        }
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            bcc((Button)sender, 1);
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            bcc((Button)sender, 2);
+        }
+
+        private void button7_MouseHover(object sender, EventArgs e)
+        {
+            bcc(button1, 1);
+        }
     }
 }

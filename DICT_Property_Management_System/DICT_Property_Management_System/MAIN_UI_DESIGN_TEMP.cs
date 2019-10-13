@@ -16,6 +16,10 @@ namespace DICT_Property_Management_System
         public MAIN_UI_DESIGN_TEMP()
         {
             InitializeComponent();
+            DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+            row.Cells[0].Value = "Hubba";
+            row.Cells[1].Value = "Hubba";
+            dataGridView1.Rows.Add(row);
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
